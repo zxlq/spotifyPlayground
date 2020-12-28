@@ -1,0 +1,3 @@
+<button onClick={this.props.CountStockUP}>
+  Adds Object:CountStockUP
+</button>
