@@ -135,7 +135,7 @@ class App extends Component {
                                 <i>{a.artist}</i>
                               </td>
                               <td>{a.topgenre}</td>
-                              <td>{a.price}</td>
+                              <td>€{a.price}</td>
 
 
                             </tr>
@@ -322,7 +322,7 @@ class ShowAll extends Component {
                   </td>
                   <td>{a.topgenre}</td>
                   <td>{a.year}</td>
-                  <td>{a.price}</td>
+                  <td>€{a.price}</td>
 
                   <td><button onClick={()=> this.props.SongAddedtoBasket(a.ID)}>
                   Buy</button></td>
