@@ -32,6 +32,7 @@ class App extends Component {
     //this.getBasketTotal =this.getBasketTotal.bind(this);
 
   } // end constructor
+
   /** This is the method called when the search form box changes **/
   /** Javascript will create an event object for you **/
   onSearchFormChange(event) {
@@ -59,15 +60,18 @@ class App extends Component {
   SongAddedtoBasket(SongID) {
     console.log("SongID Added to Basket="+SongID);
 
-
       let foundObj = this.state.globalArray.filter(
         this.findObjectBySongID(SongID)
       )
       console.log("Song Found="+foundObj);
+      
 
+      //add to array
+    
     this.setState({shoppingbasket:this.state.shoppingbasket.concat(foundObj)});
   }
 
+  //match song with id=id in array
   findObjectBySongID(SongIDtoFind){
     return function (songObject){
       return songObject.ID === SongIDtoFind;
