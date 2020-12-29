@@ -1,6 +1,12 @@
 export const spotifyArray = [
-  
-  
+  {
+    ID: 1,
+    title: "Hey, Soul Sister",
+    artist: "Train",
+    topgenre: "neo mellow",
+    year: 2010,
+    price: 217
+  },
   {
     ID: 2,
     title: "Love The Way You Lie",
