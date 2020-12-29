@@ -29,7 +29,7 @@ class App extends Component {
     this.SongAddedtoBasket =this.SongAddedtoBasket.bind(this);
     this.CountStockUP = this.CountStockUP.bind(this);
     this.EmptyShoppingBasket = this.EmptyShoppingBasket.bind(this);
-    //this.getBasketTotal =this.getBasketTotal.bind(this);
+   
 
   } // end constructor
 
