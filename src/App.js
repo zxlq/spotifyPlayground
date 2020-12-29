@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import cs385spotify from "./images/cs385spotify.png"; // gives image path
+import CSspotify from "./images/CSspotify.png"; // gives image path
 import { spotifyArray } from "./spotify.js";
 
 // We now have our own reference to the addressBook array
@@ -25,7 +25,7 @@ class App extends Component {
 
     this.onSearchFormChange = this.onSearchFormChange.bind(this);
     this.clearSearchBox = this.clearSearchBox.bind(this);
-    this.onClickShowAll = this.onClickShowAll.bind(this);
+    this.onClickFillBasket = this.onClickFillBasket.bind(this);
     this.SongAddedtoBasket =this.SongAddedtoBasket.bind(this);
     this.CountStockUP = this.CountStockUP.bind(this);
     this.EmptyShoppingBasket = this.EmptyShoppingBasket.bind(this);
@@ -50,7 +50,7 @@ class App extends Component {
     this.setState({ searchTerm: "" });
   }
 
-  onClickShowAll() {
+  onClickFillBasket() {
     //this.setState({ len: 0 });
     this.setState({ searchTerm: "" });
   }
@@ -97,7 +97,7 @@ class App extends Component {
         <h1>Spotify Search App</h1>
 
 
-        <img src={cs385spotify} alt="this is our spotify" />
+        <img src={CSspotify} alt="this is our spotify" />
         <br />
         <br />
         You have <b>[{this.state.shoppingbasket.length}]</b> items in your shopping basket.
@@ -167,11 +167,8 @@ class App extends Component {
                   globalArray={this.state.globalArray}
                 />
 
-        <ShowAll
-
+        <FillBasket
         SongAddedtoBasket={this.SongAddedtoBasket}
-        //StockUP={this.CountStockUP}
-
          />
 
 
@@ -275,25 +272,25 @@ class SearchForm extends Component {
 } // close the SearchForm Component
 
 
-class ShowAll extends Component {
+class FillBasket extends Component {
 
   render() {
     // this.props are the properties which are provided or passed
     // to this component. We have the searchTerm and we have the
     // onChange function.
 
-    const onClickShowAll = this.props.onClickShowAll;
+    const onClickFillBasket = this.props.onClickFillBasket;
 
     //const stockCountInc = this.props.UpCountStock;
 
     //const sendnewData = this.props.SongAddedtoBasket;
 
     return (
-      <div className="ShowAll">
+      <div className="FillBasket">
         <hr />
         Show all on Spotify List:
 
-        <button onClick={onClickShowAll}>Show All!</button>
+        <button onClick={onClickFillBasket}>Show All!</button>
         <table border="1">
           <thead>
             <tr>
