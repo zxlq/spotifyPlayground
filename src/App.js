@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import CSspotify from "./images/CSspotify.png"; // gives image path
 import { spotifyArray } from "./spotify.js";
 
+
+
 // We now have our own reference to the addressBook array
 // from external Javascript file
 const localSpotify = spotifyArray;
@@ -101,7 +103,7 @@ class App extends Component {
         <h1>Spotify Search App</h1>
 
 
-        <img src={CSspotify} alt="this is our spotify" />
+        <img src={CSspotify} alt="this is our spotify img" />
         <br />
         <br />
         You have <b>[{this.state.shoppingbasket.length}]</b> items in your shopping basket.
